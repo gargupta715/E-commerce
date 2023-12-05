@@ -1,0 +1,81 @@
+no such file or directory, lstat 'C:\Users\Garima_Gupta1\AppData\Roaming\npm'
+Manually creating a folder named 'npm' in the displayed path fixed the problem.
+
+npm install react-router-dom
+
+poppins font for google font
+
+install React snippets extension in VSCode for auto react scipts 
+https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+short cut : rafce
+
+create context for filter
+
+PROPS:
+props with funtion component:
+pass props in funtion and use it {props.text}
+
+props with class component extends React.component
+and use props in render funtion like below:
+{this.props.text}
+
+State: private internal obj of a class
+create construtor to use State.
+construtor{
+    super();
+    this.state = {
+        name: "peter"
+    }
+}
+
+{this.state.name}
+
+<Buttom onclick = {()=>{this.updateState()}}>
+updateState(){
+    this.setState({name: "Bruce"})
+}
+
+
+HIDE and SHOW
+construtor{
+    super();
+    this.state={
+        show: true
+    }
+}
+{
+    this.state.show? <h1>hello> : null
+}
+<button onClick={()=>{alert("test")}}> click me</button>
+<button onClick={()=>{this.setState({show: !this.state.show})}}> Toggle me</button>
+
+Format of Hooks inside class components: statefull
+
+constructor(props) {
+    super(props);
+    this.state = { color: ‘ ‘ }
+}
+
+Format of Hooks inside function components: stateless
+
+const [color,SetColor]= React.useState('')
+
+EVENT Handling:
+<button  onClick={this.testFun.bind()}> click me</button>
+OR 
+<button  onClick={()=>this.testFun()}> click me</button>
+bind is nothing but to refer parent class scope if not using bind then it will refer button tag scope and would not able to find funtion
+
+
+LIFE Cycle:
+Mounting-> updating->unmounting
+constructor-> render->componentDidMount->componentDidUpdate->componentWillUnmount
+
+
+
+AI tool for unit test:
+diffblue
+spoak test framework
+copilot
+
+
